@@ -1,0 +1,780 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00311A51CFDFD16D3A386F2A0C01B596 /* PinchableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C33BD5762AA78E771F277F91E6EBD4 /* PinchableLabel.swift */; };
+		0BB97B78B2B3E31262117F088C39168F /* Pods-PinchableLabel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5277A5F2BFAFA46C81DA7D1136BB2C /* Pods-PinchableLabel_Tests-dummy.m */; };
+		3313AD8508CFA48EBD6B2FF1B6956D6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		351254EF368D8C4006FA1C3E039C6939 /* Pods-PinchableLabel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB513B775AE8DD1287665ECED44BA2A /* Pods-PinchableLabel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		411F9B49D37B769AD87E06B76D910706 /* Pods-PinchableLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEC655D9F8CACB8355799C77CC9FB8A /* Pods-PinchableLabel_Example-dummy.m */; };
+		8D22CA9B3429A559540618253AB6E116 /* PinchableLabel.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7349ABEB543FE973FBE1CBB39CC37A2C /* PinchableLabel.bundle */; };
+		8D9586BB3A16F7B865C18BA806C44B10 /* PinchableLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F630E45D171D137EB3B8358A363422 /* PinchableLabel-dummy.m */; };
+		960A1C8ADAAA32195114F6D7BF2CA4C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		BC290C2F64CDE416AA80D10E1268ECB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		E817F287C58F7386D21A8C8CCEDE2DB0 /* PinchableLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30B2C320738D5149D49AA7407F486FAF /* PinchableLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F91AB5C86D597595A675F3FBEF1BF15E /* Pods-PinchableLabel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0BBAF0510627D5EEF2C7B31C20A5816 /* Pods-PinchableLabel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07166666DCB417A2E94AB86A7C6A54B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D905869317AD308FBB5DD9BED6B5842B;
+			remoteInfo = PinchableLabel;
+		};
+		F0D6B68F2320B612B67F382C11920AF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 084AE20514AC15095F161DE225E844E4;
+			remoteInfo = "PinchableLabel-PinchableLabel";
+		};
+		FED70C35794CA33B69EA28339F2E24CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D905869317AD308FBB5DD9BED6B5842B;
+			remoteInfo = PinchableLabel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0431D5A939D30EA58480A4812B156540 /* PinchableLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PinchableLabel.xcconfig; sourceTree = "<group>"; };
+		08C33BD5762AA78E771F277F91E6EBD4 /* PinchableLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PinchableLabel.swift; sourceTree = "<group>"; };
+		10796C6231442FE9F04109CC4BEE8F72 /* Pods_PinchableLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinchableLabel_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24BED67B9A15C79F99C7B4856C11B0DF /* Pods-PinchableLabel_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PinchableLabel_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		2865FE5977A00B451992351B49F8B26C /* PinchableLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PinchableLabel-prefix.pch"; sourceTree = "<group>"; };
+		2BA801EB3FAE226D46FA6C287FB53D3D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30B2C320738D5149D49AA7407F486FAF /* PinchableLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PinchableLabel-umbrella.h"; sourceTree = "<group>"; };
+		38C825FFDF78399D7D73E76EF53CC973 /* Pods-PinchableLabel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PinchableLabel_Tests.modulemap"; sourceTree = "<group>"; };
+		3DEC45479999E813BA971EC2F162193A /* Pods-PinchableLabel_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PinchableLabel_Tests-resources.sh"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3FB513B775AE8DD1287665ECED44BA2A /* Pods-PinchableLabel_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PinchableLabel_Example-umbrella.h"; sourceTree = "<group>"; };
+		4FF24CC13AE4C33439B075D9DA976F50 /* Pods_PinchableLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinchableLabel_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		505AD464C6C89E9CE0EE53FEF9083705 /* Pods-PinchableLabel_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PinchableLabel_Example-frameworks.sh"; sourceTree = "<group>"; };
+		5D5277A5F2BFAFA46C81DA7D1136BB2C /* Pods-PinchableLabel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PinchableLabel_Tests-dummy.m"; sourceTree = "<group>"; };
+		6D7AC6754218DA6A9D70B148F0B60BA4 /* Pods-PinchableLabel_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PinchableLabel_Example-resources.sh"; sourceTree = "<group>"; };
+		6E68DBC806FC87D5267124B42DE2545F /* Pods-PinchableLabel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PinchableLabel_Example.modulemap"; sourceTree = "<group>"; };
+		7349ABEB543FE973FBE1CBB39CC37A2C /* PinchableLabel.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinchableLabel.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		933EBE0DE9E36C57773F527763F5983F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A8E5E7386745404B363AB732747511E /* Pods-PinchableLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PinchableLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9E85E94E1DAB362906DDAF5EF8662394 /* Pods-PinchableLabel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PinchableLabel_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A1F630E45D171D137EB3B8358A363422 /* PinchableLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PinchableLabel-dummy.m"; sourceTree = "<group>"; };
+		A6D97D624CB8FA3D4BFB5B1989EA73D7 /* Pods-PinchableLabel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PinchableLabel_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AAD24CED3D5BD10E3D28C6D3D570ADF7 /* Pods-PinchableLabel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PinchableLabel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B28C831E8B38D4799C70042927BC6908 /* Pods-PinchableLabel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PinchableLabel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		B5BC0F6F954842FE243578462294B18B /* Pods-PinchableLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PinchableLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B87242FBD9EE08C45CDBD68812FDA45A /* PinchableLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PinchableLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BDA83D8B205E9E0C73B2551122F794C9 /* PinchableLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PinchableLabel.modulemap; sourceTree = "<group>"; };
+		C8908FF2DC481166E3048A4F6392CB94 /* Pods-PinchableLabel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PinchableLabel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CBEC655D9F8CACB8355799C77CC9FB8A /* Pods-PinchableLabel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PinchableLabel_Example-dummy.m"; sourceTree = "<group>"; };
+		E0BBAF0510627D5EEF2C7B31C20A5816 /* Pods-PinchableLabel_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PinchableLabel_Tests-umbrella.h"; sourceTree = "<group>"; };
+		FC8224E713AD16141723ECE8C67DBF3D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDDBB32B0E8510F64E7BFCBEEDCBA33E /* Pods-PinchableLabel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PinchableLabel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		414388B966BE5045118D60109671B379 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3313AD8508CFA48EBD6B2FF1B6956D6B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5495904E611DA5E5D6D8B5DED8009BF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75E8B159C806FD9A1DC0976F4BA7E756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				960A1C8ADAAA32195114F6D7BF2CA4C5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E355EBB70FC3ACB5CB5AEEF2D3D87FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC290C2F64CDE416AA80D10E1268ECB4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1653B2C55AE5D7B5F51251542E0C2709 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				81F409B9FE8EC80CBBA925AC7297C723 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		288FE699DE3FB64D265C0FA165ED0E19 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BA801EB3FAE226D46FA6C287FB53D3D /* Info.plist */,
+				BDA83D8B205E9E0C73B2551122F794C9 /* PinchableLabel.modulemap */,
+				0431D5A939D30EA58480A4812B156540 /* PinchableLabel.xcconfig */,
+				A1F630E45D171D137EB3B8358A363422 /* PinchableLabel-dummy.m */,
+				2865FE5977A00B451992351B49F8B26C /* PinchableLabel-prefix.pch */,
+				30B2C320738D5149D49AA7407F486FAF /* PinchableLabel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PinchableLabel";
+			sourceTree = "<group>";
+		};
+		622658BBAADFCB4D6598ABFC59751091 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7349ABEB543FE973FBE1CBB39CC37A2C /* PinchableLabel.bundle */,
+				B87242FBD9EE08C45CDBD68812FDA45A /* PinchableLabel.framework */,
+				4FF24CC13AE4C33439B075D9DA976F50 /* Pods_PinchableLabel_Example.framework */,
+				10796C6231442FE9F04109CC4BEE8F72 /* Pods_PinchableLabel_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B265F817A593E44368298B647C84D1E /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7156D2FF98E64299A745A308C03DD36F /* PinchableLabel */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7156D2FF98E64299A745A308C03DD36F /* PinchableLabel */ = {
+			isa = PBXGroup;
+			children = (
+				1653B2C55AE5D7B5F51251542E0C2709 /* Pod */,
+				288FE699DE3FB64D265C0FA165ED0E19 /* Support Files */,
+			);
+			name = PinchableLabel;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				6B265F817A593E44368298B647C84D1E /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				622658BBAADFCB4D6598ABFC59751091 /* Products */,
+				FDDBB1FD284765523E8A91BE98F2DB8C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		81F409B9FE8EC80CBBA925AC7297C723 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				08C33BD5762AA78E771F277F91E6EBD4 /* PinchableLabel.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9014C8B7DF81E915B36BD5D99085F7FB /* Pods-PinchableLabel_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				933EBE0DE9E36C57773F527763F5983F /* Info.plist */,
+				38C825FFDF78399D7D73E76EF53CC973 /* Pods-PinchableLabel_Tests.modulemap */,
+				C8908FF2DC481166E3048A4F6392CB94 /* Pods-PinchableLabel_Tests-acknowledgements.markdown */,
+				FDDBB32B0E8510F64E7BFCBEEDCBA33E /* Pods-PinchableLabel_Tests-acknowledgements.plist */,
+				5D5277A5F2BFAFA46C81DA7D1136BB2C /* Pods-PinchableLabel_Tests-dummy.m */,
+				24BED67B9A15C79F99C7B4856C11B0DF /* Pods-PinchableLabel_Tests-frameworks.sh */,
+				3DEC45479999E813BA971EC2F162193A /* Pods-PinchableLabel_Tests-resources.sh */,
+				E0BBAF0510627D5EEF2C7B31C20A5816 /* Pods-PinchableLabel_Tests-umbrella.h */,
+				9A8E5E7386745404B363AB732747511E /* Pods-PinchableLabel_Tests.debug.xcconfig */,
+				A6D97D624CB8FA3D4BFB5B1989EA73D7 /* Pods-PinchableLabel_Tests.release.xcconfig */,
+			);
+			name = "Pods-PinchableLabel_Tests";
+			path = "Target Support Files/Pods-PinchableLabel_Tests";
+			sourceTree = "<group>";
+		};
+		B9B5B0E554896307D3DF83A308717123 /* Pods-PinchableLabel_Example */ = {
+			isa = PBXGroup;
+			children = (
+				FC8224E713AD16141723ECE8C67DBF3D /* Info.plist */,
+				6E68DBC806FC87D5267124B42DE2545F /* Pods-PinchableLabel_Example.modulemap */,
+				AAD24CED3D5BD10E3D28C6D3D570ADF7 /* Pods-PinchableLabel_Example-acknowledgements.markdown */,
+				B28C831E8B38D4799C70042927BC6908 /* Pods-PinchableLabel_Example-acknowledgements.plist */,
+				CBEC655D9F8CACB8355799C77CC9FB8A /* Pods-PinchableLabel_Example-dummy.m */,
+				505AD464C6C89E9CE0EE53FEF9083705 /* Pods-PinchableLabel_Example-frameworks.sh */,
+				6D7AC6754218DA6A9D70B148F0B60BA4 /* Pods-PinchableLabel_Example-resources.sh */,
+				3FB513B775AE8DD1287665ECED44BA2A /* Pods-PinchableLabel_Example-umbrella.h */,
+				B5BC0F6F954842FE243578462294B18B /* Pods-PinchableLabel_Example.debug.xcconfig */,
+				9E85E94E1DAB362906DDAF5EF8662394 /* Pods-PinchableLabel_Example.release.xcconfig */,
+			);
+			name = "Pods-PinchableLabel_Example";
+			path = "Target Support Files/Pods-PinchableLabel_Example";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FDDBB1FD284765523E8A91BE98F2DB8C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9B5B0E554896307D3DF83A308717123 /* Pods-PinchableLabel_Example */,
+				9014C8B7DF81E915B36BD5D99085F7FB /* Pods-PinchableLabel_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		906AB89551FAB3391E8B688C186EFB91 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F91AB5C86D597595A675F3FBEF1BF15E /* Pods-PinchableLabel_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E891AD82A8EE9BE39A558C393141A59B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E817F287C58F7386D21A8C8CCEDE2DB0 /* PinchableLabel-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEDC1F4984C2ECF02380BBC546723C20 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				351254EF368D8C4006FA1C3E039C6939 /* Pods-PinchableLabel_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		084AE20514AC15095F161DE225E844E4 /* PinchableLabel-PinchableLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 060BA0037987D4216B49B60BDE5F4668 /* Build configuration list for PBXNativeTarget "PinchableLabel-PinchableLabel" */;
+			buildPhases = (
+				8C3CA6CBD35CAC1FD06467484E7BCCB0 /* Sources */,
+				5495904E611DA5E5D6D8B5DED8009BF7 /* Frameworks */,
+				4C8336FFBB98950D8F7D2067652A9827 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PinchableLabel-PinchableLabel";
+			productName = "PinchableLabel-PinchableLabel";
+			productReference = 7349ABEB543FE973FBE1CBB39CC37A2C /* PinchableLabel.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		135D3ECB4150B9629A299199BE5EE222 /* Pods-PinchableLabel_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40206FE9A49853D764B067C617766CD3 /* Build configuration list for PBXNativeTarget "Pods-PinchableLabel_Tests" */;
+			buildPhases = (
+				CA0484075D935F24E76A1EF970B1F4B2 /* Sources */,
+				75E8B159C806FD9A1DC0976F4BA7E756 /* Frameworks */,
+				906AB89551FAB3391E8B688C186EFB91 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22F6AB43B961F713A2BB8185DF5C2B9A /* PBXTargetDependency */,
+			);
+			name = "Pods-PinchableLabel_Tests";
+			productName = "Pods-PinchableLabel_Tests";
+			productReference = 10796C6231442FE9F04109CC4BEE8F72 /* Pods_PinchableLabel_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		80C29B33C4F62594BEA92B615D9CDB53 /* Pods-PinchableLabel_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC468C01CFADE89971E5EE1AA179AA3 /* Build configuration list for PBXNativeTarget "Pods-PinchableLabel_Example" */;
+			buildPhases = (
+				5C089B38F636453A59174D2B523E4A42 /* Sources */,
+				9E355EBB70FC3ACB5CB5AEEF2D3D87FC /* Frameworks */,
+				FEDC1F4984C2ECF02380BBC546723C20 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28E6C1325FDED40C12088711E83F269E /* PBXTargetDependency */,
+			);
+			name = "Pods-PinchableLabel_Example";
+			productName = "Pods-PinchableLabel_Example";
+			productReference = 4FF24CC13AE4C33439B075D9DA976F50 /* Pods_PinchableLabel_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D905869317AD308FBB5DD9BED6B5842B /* PinchableLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC18C4AF54046434F2F25702A06F044D /* Build configuration list for PBXNativeTarget "PinchableLabel" */;
+			buildPhases = (
+				2A0D638A35F7DF9D847F443234655CB6 /* Sources */,
+				414388B966BE5045118D60109671B379 /* Frameworks */,
+				74D681FF542AE56971992229E8CA6429 /* Resources */,
+				E891AD82A8EE9BE39A558C393141A59B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBADCAA0815A1EA264F9E5D70E6409F7 /* PBXTargetDependency */,
+			);
+			name = PinchableLabel;
+			productName = PinchableLabel;
+			productReference = B87242FBD9EE08C45CDBD68812FDA45A /* PinchableLabel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 622658BBAADFCB4D6598ABFC59751091 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D905869317AD308FBB5DD9BED6B5842B /* PinchableLabel */,
+				084AE20514AC15095F161DE225E844E4 /* PinchableLabel-PinchableLabel */,
+				80C29B33C4F62594BEA92B615D9CDB53 /* Pods-PinchableLabel_Example */,
+				135D3ECB4150B9629A299199BE5EE222 /* Pods-PinchableLabel_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C8336FFBB98950D8F7D2067652A9827 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74D681FF542AE56971992229E8CA6429 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D22CA9B3429A559540618253AB6E116 /* PinchableLabel.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A0D638A35F7DF9D847F443234655CB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D9586BB3A16F7B865C18BA806C44B10 /* PinchableLabel-dummy.m in Sources */,
+				00311A51CFDFD16D3A386F2A0C01B596 /* PinchableLabel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C089B38F636453A59174D2B523E4A42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				411F9B49D37B769AD87E06B76D910706 /* Pods-PinchableLabel_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C3CA6CBD35CAC1FD06467484E7BCCB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0484075D935F24E76A1EF970B1F4B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BB97B78B2B3E31262117F088C39168F /* Pods-PinchableLabel_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22F6AB43B961F713A2BB8185DF5C2B9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PinchableLabel;
+			target = D905869317AD308FBB5DD9BED6B5842B /* PinchableLabel */;
+			targetProxy = FED70C35794CA33B69EA28339F2E24CA /* PBXContainerItemProxy */;
+		};
+		28E6C1325FDED40C12088711E83F269E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PinchableLabel;
+			target = D905869317AD308FBB5DD9BED6B5842B /* PinchableLabel */;
+			targetProxy = 07166666DCB417A2E94AB86A7C6A54B4 /* PBXContainerItemProxy */;
+		};
+		DBADCAA0815A1EA264F9E5D70E6409F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PinchableLabel-PinchableLabel";
+			target = 084AE20514AC15095F161DE225E844E4 /* PinchableLabel-PinchableLabel */;
+			targetProxy = F0D6B68F2320B612B67F382C11920AF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01978F7182F36E030B9711999EBFB5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0431D5A939D30EA58480A4812B156540 /* PinchableLabel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PinchableLabel/PinchableLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PinchableLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PinchableLabel/PinchableLabel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PinchableLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		117E82B7BAB7511CD86E0494E05C7088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A8E5E7386745404B363AB732747511E /* Pods-PinchableLabel_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PinchableLabel_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PinchableLabel_Tests/Pods-PinchableLabel_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_PinchableLabel_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		393B67434E1B146B9F74CB2497B1C131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5BC0F6F954842FE243578462294B18B /* Pods-PinchableLabel_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PinchableLabel_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PinchableLabel_Example/Pods-PinchableLabel_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_PinchableLabel_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		51677A7C7D2A878594C626403D57A907 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0431D5A939D30EA58480A4812B156540 /* PinchableLabel.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = PinchableLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		58FA8987BAD41D06EB2692C15B3F1BC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E85E94E1DAB362906DDAF5EF8662394 /* Pods-PinchableLabel_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PinchableLabel_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PinchableLabel_Example/Pods-PinchableLabel_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_PinchableLabel_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ACA13DE0915762003645577265167099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0431D5A939D30EA58480A4812B156540 /* PinchableLabel.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = PinchableLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		BA5EBC28875507756726B457F9D63E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6D97D624CB8FA3D4BFB5B1989EA73D7 /* Pods-PinchableLabel_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PinchableLabel_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PinchableLabel_Tests/Pods-PinchableLabel_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_PinchableLabel_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E0E04F64DA8AA9578C5B00BF9F3AA815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0431D5A939D30EA58480A4812B156540 /* PinchableLabel.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PinchableLabel/PinchableLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PinchableLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PinchableLabel/PinchableLabel.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PinchableLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		060BA0037987D4216B49B60BDE5F4668 /* Build configuration list for PBXNativeTarget "PinchableLabel-PinchableLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51677A7C7D2A878594C626403D57A907 /* Debug */,
+				ACA13DE0915762003645577265167099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
+				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FC468C01CFADE89971E5EE1AA179AA3 /* Build configuration list for PBXNativeTarget "Pods-PinchableLabel_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				393B67434E1B146B9F74CB2497B1C131 /* Debug */,
+				58FA8987BAD41D06EB2692C15B3F1BC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40206FE9A49853D764B067C617766CD3 /* Build configuration list for PBXNativeTarget "Pods-PinchableLabel_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				117E82B7BAB7511CD86E0494E05C7088 /* Debug */,
+				BA5EBC28875507756726B457F9D63E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC18C4AF54046434F2F25702A06F044D /* Build configuration list for PBXNativeTarget "PinchableLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01978F7182F36E030B9711999EBFB5FC /* Debug */,
+				E0E04F64DA8AA9578C5B00BF9F3AA815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

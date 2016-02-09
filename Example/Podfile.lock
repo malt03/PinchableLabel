@@ -1,0 +1,14 @@
+PODS:
+  - PinchableLabel (0.1.0)
+
+DEPENDENCIES:
+  - PinchableLabel (from `../`)
+
+EXTERNAL SOURCES:
+  PinchableLabel:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PinchableLabel: 4f1a0b1e6066629824546c88d77511145e2bfdfa
+
+COCOAPODS: 0.39.0

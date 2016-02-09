@@ -1,0 +1,6 @@
+framework module PinchableLabel {
+  umbrella header "PinchableLabel-umbrella.h"
+
+  export *
+  module * { export * }
+}
