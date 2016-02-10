@@ -99,6 +99,7 @@ public class PinchableLabel: UILabel {
         self.transform = endRotateTransform
         font = .systemFontOfSize(fontSize)
         bounds.size = beginSize * lastScale
+        sizeToFit()
       }
       if activeTouches.count == 1 {
         let transform = CGAffineTransformTranslateWithSize(self.transform, -bounds.size / 2)
