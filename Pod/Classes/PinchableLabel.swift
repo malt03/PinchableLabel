@@ -18,7 +18,7 @@ public class PinchableLabel: UILabel {
   var maxFontSize = CGFloat(800)
   var minFontSize = CGFloat(22)
   
-  override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     super.init(frame: frame)
     userInteractionEnabled = true
     multipleTouchEnabled = true
