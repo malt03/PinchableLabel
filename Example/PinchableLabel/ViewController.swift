@@ -19,24 +19,17 @@ class ViewController: UIViewController, PinchableLabelDelegate {
     view.addSubview(label)
 
     label.delegate = self
-    label.handler = { (label) in
-      switch label.state {
-      case .Began: print("began handler")
-      case .Moved: print("moved handler")
-      case .Ended: print("ended handler")
-      }
-    }
   }
   
-  func pinchableLabelTouchesBegan(pinchableLabel: PinchableLabel) {
+  func pinchableLabelTouchesBegan(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?) {
     print("began delegate")
   }
   
-  func pinchableLabelTouchesMoved(pinchableLabel: PinchableLabel) {
+  func pinchableLabelTouchesMoved(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?) {
     print("moved delegate")
   }
   
-  func pinchableLabelTouchesEnded(pinchableLabel: PinchableLabel) {
+  func pinchableLabelTouchesEnded(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?) {
     print("ended delegate")
   }
 }

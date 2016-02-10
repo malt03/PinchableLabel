@@ -9,15 +9,9 @@
 import UIKit
 
 @objc public protocol PinchableLabelDelegate {
-  optional func pinchableLabelTouchesBegan(pinchableLabel: PinchableLabel)
-  optional func pinchableLabelTouchesMoved(pinchableLabel: PinchableLabel)
-  optional func pinchableLabelTouchesEnded(pinchableLabel: PinchableLabel)
-}
-
-public enum PinchableLabelState {
-  case Began
-  case Moved
-  case Ended
+  optional func pinchableLabelTouchesBegan(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?)
+  optional func pinchableLabelTouchesMoved(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?)
+  optional func pinchableLabelTouchesEnded(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?)
 }
 
 public class PinchableLabel: UILabel {
@@ -30,10 +24,7 @@ public class PinchableLabel: UILabel {
   public var maxFontSize = CGFloat(800)
   public var minFontSize = CGFloat(22)
   
-  public var state = PinchableLabelState.Ended
-  
   public var delegate: PinchableLabelDelegate?
-  public var handler: ((pinchableLabel: PinchableLabel) -> Void)?
   
   override public init(frame: CGRect) {
     super.init(frame: frame)
@@ -80,10 +71,7 @@ public class PinchableLabel: UILabel {
       (beginDistance, beginRadian, beginCenter) = distanceRadianAndCenter(location0, location1)
     }
 
-    state = .Began
-
-    delegate?.pinchableLabelTouchesBegan?(self)
-    handler?(pinchableLabel: self)
+    delegate?.pinchableLabelTouchesBegan?(self, touches: touches, withEvent: event)
   }
   
   override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -105,10 +93,7 @@ public class PinchableLabel: UILabel {
       center = location - CGPointApplyAffineTransform(locationInLabelFromCenter, lastRotateTransform)
     }
     
-    state = .Moved
-
-    delegate?.pinchableLabelTouchesMoved?(self)
-    handler?(pinchableLabel: self)
+    delegate?.pinchableLabelTouchesMoved?(self, touches: touches, withEvent: event)
   }
   
   override public func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -134,10 +119,7 @@ public class PinchableLabel: UILabel {
       }
     }
 
-    state = .Ended
-
-    delegate?.pinchableLabelTouchesEnded?(self)
-    handler?(pinchableLabel: self)
+    delegate?.pinchableLabelTouchesEnded?(self, touches: touches, withEvent: event)
   }
   
   override public func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool {
