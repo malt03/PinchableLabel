@@ -21,7 +21,7 @@ You can rotate and scale this label by pinching.
                        DESC
 
   s.homepage         = "https://github.com/malt03/PinchableLabel"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.screenshots      = "https://raw.githubusercontent.com/malt03/PinchableLabel/master/screen_shot.gif"
   s.license          = 'MIT'
   s.author           = { "Koji Murata" => "malt.koji@gmail.com" }
   s.source           = { :git => "https://github.com/malt03/PinchableLabel.git", :tag => s.version.to_s }

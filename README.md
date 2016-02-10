@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/PinchableLabel.svg?style=flat)](http://cocoapods.org/pods/PinchableLabel)
 [![Platform](https://img.shields.io/cocoapods/p/PinchableLabel.svg?style=flat)](http://cocoapods.org/pods/PinchableLabel)
 
+[![Screen Shot](https://raw.githubusercontent.com/malt03/PinchableLabel/master/screen_shot.gif)]
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
