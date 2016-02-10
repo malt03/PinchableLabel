@@ -10,12 +10,22 @@
 
 ## Usage
 
+### Initialize
 ```swift
 let label = PinchableLabel()
 label.text = "Label"
 label.sizeToFit()
 label.center = view.center
 view.addSubview(label)
+```
+
+### Delegate
+```swift
+protocol PinchableLabelDelegate {
+  optional func pinchableLabelTouchesBegan(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?)
+  optional func pinchableLabelTouchesMoved(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?)
+  optional func pinchableLabelTouchesEnded(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?)
+}
 ```
 
 ## Installation via Carthage
