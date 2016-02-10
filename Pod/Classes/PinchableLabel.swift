@@ -8,6 +8,18 @@
 
 import UIKit
 
+@objc public protocol PinchableLabelDelegate {
+  optional func pinchableLabelTouchesBegan(pinchableLabel: PinchableLabel)
+  optional func pinchableLabelTouchesMoved(pinchableLabel: PinchableLabel)
+  optional func pinchableLabelTouchesEnded(pinchableLabel: PinchableLabel)
+}
+
+public enum PinchableLabelState {
+  case Began
+  case Moved
+  case Ended
+}
+
 public class PinchableLabel: UILabel {
   // Making the hit area larger than the default hit area.
   public var tappableInset = UIEdgeInsets(top: -50, left: -50, bottom: -50, right: -50)
@@ -17,6 +29,11 @@ public class PinchableLabel: UILabel {
   // Small font emoji is not able to render.
   public var maxFontSize = CGFloat(800)
   public var minFontSize = CGFloat(22)
+  
+  public var state = PinchableLabelState.Ended
+  
+  public var delegate: PinchableLabelDelegate?
+  public var handler: ((pinchableLabel: PinchableLabel) -> Void)?
   
   override public init(frame: CGRect) {
     super.init(frame: frame)
@@ -62,6 +79,11 @@ public class PinchableLabel: UILabel {
       let location1 = CGPointApplyAffineTransform(activeTouches[1].locationInView(self), transform)
       (beginDistance, beginRadian, beginCenter) = distanceRadianAndCenter(location0, location1)
     }
+
+    state = .Began
+
+    delegate?.pinchableLabelTouchesBegan?(self)
+    handler?(pinchableLabel: self)
   }
   
   override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -82,6 +104,11 @@ public class PinchableLabel: UILabel {
       self.transform = CGAffineTransformConcat(beginTransform, transform)
       center = location - CGPointApplyAffineTransform(locationInLabelFromCenter, lastRotateTransform)
     }
+    
+    state = .Moved
+
+    delegate?.pinchableLabelTouchesMoved?(self)
+    handler?(pinchableLabel: self)
   }
   
   override public func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -106,6 +133,11 @@ public class PinchableLabel: UILabel {
         beginCenter = CGPointApplyAffineTransform(activeTouches[0].locationInView(self), transform)
       }
     }
+
+    state = .Ended
+
+    delegate?.pinchableLabelTouchesEnded?(self)
+    handler?(pinchableLabel: self)
   }
   
   override public func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool {
