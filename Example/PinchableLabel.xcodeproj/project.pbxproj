@@ -13,6 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		62BAE0F837067CDCC8187350 /* Pods_PinchableLabel_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A3187DE472988932986AF4 /* Pods_PinchableLabel_Example.framework */; };
+		ED43C3921C6AE032007E7C6F /* KTouchPointerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = ED43C3911C6AE032007E7C6F /* KTouchPointerWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,9 @@
 		BCC309128F023ADD224217F7 /* Pods-PinchableLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchableLabel_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinchableLabel_Example/Pods-PinchableLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D19B6648964335D92BF34167 /* PinchableLabel.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PinchableLabel.podspec; path = ../PinchableLabel.podspec; sourceTree = "<group>"; };
 		ED014D82AF6A22A5432D2BBD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		ED43C38F1C6AE031007E7C6F /* PinchableLabel_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PinchableLabel_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		ED43C3901C6AE032007E7C6F /* KTouchPointerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTouchPointerWindow.h; sourceTree = "<group>"; };
+		ED43C3911C6AE032007E7C6F /* KTouchPointerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTouchPointerWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +81,15 @@
 		607FACD21AFB9204008FA782 /* Example for PinchableLabel */ = {
 			isa = PBXGroup;
 			children = (
+				ED43C3901C6AE032007E7C6F /* KTouchPointerWindow.h */,
+				ED43C3911C6AE032007E7C6F /* KTouchPointerWindow.m */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				ED43C38F1C6AE031007E7C6F /* PinchableLabel_Example-Bridging-Header.h */,
 			);
 			name = "Example for PinchableLabel";
 			path = PinchableLabel;
@@ -240,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				ED43C3921C6AE032007E7C6F /* KTouchPointerWindow.m in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,11 +361,14 @@
 			baseConfigurationReference = BCC309128F023ADD224217F7 /* Pods-PinchableLabel_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PinchableLabel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PinchableLabel/PinchableLabel_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -366,11 +377,13 @@
 			baseConfigurationReference = 4679581069A05735B9D0E06F /* Pods-PinchableLabel_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PinchableLabel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PinchableLabel/PinchableLabel_Example-Bridging-Header.h";
 			};
 			name = Release;
 		};
