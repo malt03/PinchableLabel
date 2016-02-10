@@ -10,13 +10,13 @@ import UIKit
 
 public class PinchableLabel: UILabel {
   // Making the hit area larger than the default hit area.
-  var tappableInset = UIEdgeInsets(top: -50, left: -50, bottom: -50, right: -50)
+  public var tappableInset = UIEdgeInsets(top: -50, left: -50, bottom: -50, right: -50)
   
   // When bigger or smaller, does not re-rendering.
   // Large font is too heavy to render.
   // Small font emoji is not able to render.
-  var maxFontSize = CGFloat(800)
-  var minFontSize = CGFloat(22)
+  public var maxFontSize = CGFloat(800)
+  public var minFontSize = CGFloat(22)
   
   override public init(frame: CGRect) {
     super.init(frame: frame)
