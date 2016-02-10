@@ -122,6 +122,11 @@ public class PinchableLabel: UILabel {
     delegate?.pinchableLabelTouchesEnded?(self, touches: touches, withEvent: event)
   }
   
+  public override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+    guard let t = touches else { return }
+    touchesEnded(t, withEvent: event)
+  }
+  
   override public func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool {
     if activeTouches.count > 0 { return true }
     var rect = bounds
