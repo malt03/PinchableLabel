@@ -24,6 +24,11 @@ public class PinchableLabel: UILabel {
   public var maxFontSize = CGFloat(800)
   public var minFontSize = CGFloat(22)
   
+  public var lockRotate = false
+  public var lockScale = false
+  public var lockOriginX = false
+  public var lockOriginY = false
+  
   public var delegate: PinchableLabelDelegate?
   
   override public init(frame: CGRect) {
@@ -76,22 +81,26 @@ public class PinchableLabel: UILabel {
   
   override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
     let location0 = activeTouches[0].locationInView(superview)
+    let c: CGPoint
     if activeTouches.count == 1 {
-      center = location0 - beginCenter
+      c = location0 - beginCenter
     } else {
       let location1 = activeTouches[1].locationInView(superview)
       let (distance, radian, location) = distanceRadianAndCenter(location0, location1)
-      let scale = distance / beginDistance
+      let scale = lockScale ? 1 : distance / beginDistance
       
-      let rotate = beginRadian - radian
+      let rotate = lockRotate ? 0 : beginRadian - radian
       let locationInLabelFromCenter = beginCenter * scale
       
       lastScale = scale * endScale
       lastRotateTransform = CGAffineTransformMakeRotation(rotate)
       let transform = CGAffineTransformScaleWithFloat(lastRotateTransform, lastScale)
       self.transform = CGAffineTransformConcat(beginTransform, transform)
-      center = location - CGPointApplyAffineTransform(locationInLabelFromCenter, lastRotateTransform)
+      c = location - CGPointApplyAffineTransform(locationInLabelFromCenter, lastRotateTransform)
     }
+
+    if !lockOriginX { center.x = c.x }
+    if !lockOriginY { center.y = c.y }
     
     delegate?.pinchableLabelTouchesMoved?(self, touches: touches, withEvent: event)
   }
