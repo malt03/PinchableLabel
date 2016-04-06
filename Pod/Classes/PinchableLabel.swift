@@ -29,6 +29,9 @@ public class PinchableLabel: UILabel {
   public var lockOriginX = false
   public var lockOriginY = false
   
+  public var addingWidth = CGFloat(0)
+  public var addingHeight = CGFloat(0)
+  
   public var delegate: PinchableLabelDelegate?
   
   override public init(frame: CGRect) {
@@ -39,6 +42,13 @@ public class PinchableLabel: UILabel {
   
   required public init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  public func unlockAll() {
+    lockRotate = false
+    lockScale = false
+    lockOriginX = false
+    lockOriginY = false
   }
   
   private var beginSize: CGSize!
@@ -118,9 +128,11 @@ public class PinchableLabel: UILabel {
       } else {
         endScale = 1
         self.transform = endRotateTransform
-        font = .systemFontOfSize(fontSize)
-        bounds.size = beginSize * lastScale
-        sizeToFit()
+        let t = NSMutableAttributedString(attributedString: attributedText!)
+        t.applyScaleToFont(fontSize / font.pointSize)
+        
+        attributedText = t
+        sizeFitToTextSize()
       }
       if activeTouches.count == 1 {
         let transform = CGAffineTransformTranslateWithSize(self.transform, -bounds.size / 2)
@@ -144,6 +156,27 @@ public class PinchableLabel: UILabel {
     rect.size.width -= (tappableInset.left + tappableInset.right) / endScale
     rect.size.height -= (tappableInset.top + tappableInset.bottom) / endScale
     return CGRectContainsPoint(rect, point)
+  }
+  
+  func sizeFitToTextSize() {
+    let s = attributedText!.size()
+    bounds.size = CGSize(width: s.width + addingWidth, height: s.height + addingHeight)
+  }
+}
+
+extension NSMutableAttributedString {
+  func applyScaleToFont(scale: CGFloat) {
+    var i = 0
+    while i < length {
+      var range = NSRange()
+      let font = attribute(NSFontAttributeName, atIndex: i, effectiveRange: &range) as! UIFont
+      let kern = (attribute(NSKernAttributeName, atIndex: i, effectiveRange: nil) as? NSNumber).map { $0.floatValue } ?? 0
+      addAttributes([
+        NSFontAttributeName: font.fontWithSize(font.pointSize * scale),
+        NSKernAttributeName: NSNumber(float: kern * Float(scale))
+      ], range: range)
+      i = range.location + range.length
+    }
   }
 }
 

@@ -13,7 +13,16 @@ class ViewController: UIViewController, PinchableLabelDelegate {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     let label = PinchableLabel()
-    label.text = "Label"
+    label.numberOfLines = 0
+    let text = NSMutableAttributedString(string: "hoge\n", attributes: [
+      NSFontAttributeName: UIFont.systemFontOfSize(20),
+      NSForegroundColorAttributeName: UIColor.blueColor(),
+    ])
+    text.appendAttributedString(NSAttributedString(string: "piyopiyo", attributes: [
+      NSFontAttributeName: UIFont.systemFontOfSize(10),
+      NSForegroundColorAttributeName: UIColor.redColor(),
+    ]))
+    label.attributedText = text
     label.sizeToFit()
     label.center = view.center
     view.addSubview(label)
