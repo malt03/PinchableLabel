@@ -9,93 +9,95 @@
 import UIKit
 
 @objc public protocol PinchableLabelDelegate {
-  optional func pinchableLabelTouchesBegan(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?)
-  optional func pinchableLabelTouchesMoved(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?)
-  optional func pinchableLabelTouchesEnded(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?)
+  @objc optional func pinchableLabelTouchesBegan(_ pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?)
+  @objc optional func pinchableLabelTouchesMoved(_ pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?)
+  @objc optional func pinchableLabelTouchesEnded(_ pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?)
 }
 
-public class PinchableLabel: UILabel {
+open class PinchableLabel: UILabel {
   // Making the hit area larger than the default hit area.
-  public var tappableInset = UIEdgeInsets(top: -50, left: -50, bottom: -50, right: -50)
+  open var tappableInset = UIEdgeInsets(top: -50, left: -50, bottom: -50, right: -50)
   
   // When bigger or smaller, does not re-rendering.
   // Large font is too heavy to render.
   // Small font emoji is not able to render.
-  public var maxFontSize = CGFloat(800)
-  public var minFontSize = CGFloat(22)
+  open var maxFontSize = CGFloat(800)
+  open var minFontSize = CGFloat(22)
   
-  public var lockRotate = false
-  public var lockScale = false
-  public var lockOriginX = false
-  public var lockOriginY = false
+  open var lockRotate = false
+  open var lockScale = false
+  open var lockOriginX = false
+  open var lockOriginY = false
   
-  public var addingWidth = CGFloat(0)
-  public var addingHeight = CGFloat(0)
+  open var addingWidth = CGFloat(0)
+  open var addingHeight = CGFloat(0)
   
-  public var delegate: PinchableLabelDelegate?
+  open var delegate: PinchableLabelDelegate?
   
   override public init(frame: CGRect) {
     super.init(frame: frame)
-    userInteractionEnabled = true
-    multipleTouchEnabled = true
+    isUserInteractionEnabled = true
+    isMultipleTouchEnabled = true
   }
   
   required public init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
-  public func unlockAll() {
+  open func unlockAll() {
     lockRotate = false
     lockScale = false
     lockOriginX = false
     lockOriginY = false
   }
   
-  private var beginSize: CGSize!
-  private var beginFontSize: CGFloat!
-  private var beginCenter: CGPoint!
-  private var beginDistance = CGFloat(0)
-  private var beginRadian = CGFloat(0)
-  private var beginTransform = CGAffineTransformIdentity
-  private var lastRotateTransform = CGAffineTransformIdentity
-  private var lastScale = CGFloat(1)
-  private var endRotateTransform = CGAffineTransformIdentity
-  private var endScale = CGFloat(1)
+  fileprivate var beginSize: CGSize!
+  fileprivate var beginFontSize: CGFloat!
+  fileprivate var beginCenter: CGPoint!
+  fileprivate var beginDistance = CGFloat(0)
+  fileprivate var beginRadian = CGFloat(0)
+  fileprivate var beginTransform = CGAffineTransform.identity
+  fileprivate var lastRotateTransform = CGAffineTransform.identity
+  fileprivate var lastScale = CGFloat(1)
+  fileprivate var endRotateTransform = CGAffineTransform.identity
+  fileprivate var endScale = CGFloat(1)
   
-  private var activeTouches = [UITouch]()
+  fileprivate var activeTouches = [UITouch]()
   
-  override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+  override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     let lastActiveTouchesCount = activeTouches.count
     for t in touches {
       activeTouches.append(t)
     }
     
     let transform = CGAffineTransformTranslateWithSize(self.transform, -bounds.size / 2)
-    let location0 = CGPointApplyAffineTransform(activeTouches[0].locationInView(self), transform)
+    let location0 = activeTouches[0].location(in: self).applying(transform)
     
     beginSize = bounds.size
     beginFontSize = font.pointSize
     beginTransform = endRotateTransform
-    lastRotateTransform = CGAffineTransformIdentity
+    lastRotateTransform = CGAffineTransform.identity
     lastScale = endScale
     
     if activeTouches.count == 1 {
       beginCenter = location0
     } else if lastActiveTouchesCount < 2 && activeTouches.count >= 2 {
-      let location1 = CGPointApplyAffineTransform(activeTouches[1].locationInView(self), transform)
-      (beginDistance, beginRadian, beginCenter) = distanceRadianAndCenter(location0, location1)
+      let location1 = activeTouches[1].location(in: self).applying(transform)
+      var center: CGPoint?
+      (beginDistance, beginRadian, center) = distanceRadianAndCenter(location0, location1)
+      beginCenter = center
     }
 
     delegate?.pinchableLabelTouchesBegan?(self, touches: touches, withEvent: event)
   }
   
-  override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-    let location0 = activeTouches[0].locationInView(superview)
+  override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    let location0 = activeTouches[0].location(in: superview)
     let c: CGPoint
     if activeTouches.count == 1 {
       c = location0 - beginCenter
     } else {
-      let location1 = activeTouches[1].locationInView(superview)
+      let location1 = activeTouches[1].location(in: superview)
       let (distance, radian, location) = distanceRadianAndCenter(location0, location1)
       let scale = lockScale ? 1 : distance / beginDistance
       
@@ -103,10 +105,10 @@ public class PinchableLabel: UILabel {
       let locationInLabelFromCenter = beginCenter * scale
       
       lastScale = scale * endScale
-      lastRotateTransform = CGAffineTransformMakeRotation(rotate)
+      lastRotateTransform = CGAffineTransform(rotationAngle: rotate)
       let transform = CGAffineTransformScaleWithFloat(lastRotateTransform, lastScale)
-      self.transform = CGAffineTransformConcat(beginTransform, transform)
-      c = location - CGPointApplyAffineTransform(locationInLabelFromCenter, lastRotateTransform)
+      self.transform = beginTransform.concatenating(transform)
+      c = location! - locationInLabelFromCenter.applying(lastRotateTransform)
     }
 
     if !lockOriginX { center.x = c.x }
@@ -115,12 +117,12 @@ public class PinchableLabel: UILabel {
     delegate?.pinchableLabelTouchesMoved?(self, touches: touches, withEvent: event)
   }
   
-  override public func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+  override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     for t in touches {
-      activeTouches.removeAtIndex(activeTouches.indexOf(t)!)
+      activeTouches.remove(at: activeTouches.index(of: t)!)
     }
     if activeTouches.count < 2 {
-      endRotateTransform = CGAffineTransformConcat(beginTransform, lastRotateTransform)
+      endRotateTransform = beginTransform.concatenating(lastRotateTransform)
       
       let fontSize = beginFontSize * lastScale
       if fontSize < minFontSize || maxFontSize < fontSize {
@@ -136,26 +138,25 @@ public class PinchableLabel: UILabel {
       }
       if activeTouches.count == 1 {
         let transform = CGAffineTransformTranslateWithSize(self.transform, -bounds.size / 2)
-        beginCenter = CGPointApplyAffineTransform(activeTouches[0].locationInView(self), transform)
+        beginCenter = activeTouches[0].location(in: self).applying(transform)
       }
     }
 
     delegate?.pinchableLabelTouchesEnded?(self, touches: touches, withEvent: event)
   }
   
-  public override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
-    guard let t = touches else { return }
-    touchesEnded(t, withEvent: event)
+  open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+    touchesEnded(touches, with: event)
   }
   
-  override public func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool {
+  override open func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
     if activeTouches.count > 0 { return true }
     var rect = bounds
     rect.origin.x += tappableInset.left / endScale
     rect.origin.y += tappableInset.top / endScale
     rect.size.width -= (tappableInset.left + tappableInset.right) / endScale
     rect.size.height -= (tappableInset.top + tappableInset.bottom) / endScale
-    return CGRectContainsPoint(rect, point)
+    return rect.contains(point)
   }
   
   func sizeFitToTextSize() {
@@ -165,22 +166,22 @@ public class PinchableLabel: UILabel {
 }
 
 extension NSMutableAttributedString {
-  func applyScaleToFont(scale: CGFloat) {
+  func applyScaleToFont(_ scale: CGFloat) {
     var i = 0
     while i < length {
       var range = NSRange()
-      let font = attribute(NSFontAttributeName, atIndex: i, effectiveRange: &range) as! UIFont
-      let kern = (attribute(NSKernAttributeName, atIndex: i, effectiveRange: nil) as? NSNumber).map { $0.floatValue } ?? 0
+      let font = attribute(NSFontAttributeName, at: i, effectiveRange: &range) as! UIFont
+      let kern = (attribute(NSKernAttributeName, at: i, effectiveRange: nil) as? NSNumber).map { $0.floatValue } ?? 0
       addAttributes([
-        NSFontAttributeName: font.fontWithSize(font.pointSize * scale),
-        NSKernAttributeName: NSNumber(float: kern * Float(scale))
+        NSFontAttributeName: font.withSize(font.pointSize * scale),
+        NSKernAttributeName: NSNumber(value: kern * Float(scale))
       ], range: range)
       i = range.location + range.length
     }
   }
 }
 
-private func distanceRadianAndCenter(a: CGPoint, _ b: CGPoint) -> (CGFloat, CGFloat, CGPoint!) {
+private func distanceRadianAndCenter(_ a: CGPoint, _ b: CGPoint) -> (CGFloat, CGFloat, CGPoint?) {
   let diff = a - b
   let distance = sqrt(diff.x * diff.x + diff.y * diff.y)
   let radian = atan2(diff.x, diff.y)
@@ -188,12 +189,12 @@ private func distanceRadianAndCenter(a: CGPoint, _ b: CGPoint) -> (CGFloat, CGFl
   return (distance, radian, center)
 }
 
-private func CGAffineTransformTranslateWithSize(transform: CGAffineTransform, _ size: CGSize) -> CGAffineTransform {
-  return CGAffineTransformTranslate(transform, size.width, size.height)
+private func CGAffineTransformTranslateWithSize(_ transform: CGAffineTransform, _ size: CGSize) -> CGAffineTransform {
+  return transform.translatedBy(x: size.width, y: size.height)
 }
 
-private func CGAffineTransformScaleWithFloat(transform: CGAffineTransform, _ float: CGFloat) -> CGAffineTransform {
-  return CGAffineTransformScale(transform, float, float)
+private func CGAffineTransformScaleWithFloat(_ transform: CGAffineTransform, _ float: CGFloat) -> CGAffineTransform {
+  return transform.scaledBy(x: float, y: float)
 }
 
 private func +(left: CGPoint, right: CGPoint) -> CGPoint {

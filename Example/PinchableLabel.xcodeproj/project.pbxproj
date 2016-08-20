@@ -12,16 +12,14 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		62BAE0F837067CDCC8187350 /* Pods_PinchableLabel_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A3187DE472988932986AF4 /* Pods_PinchableLabel_Example.framework */; };
+		69EF859E01E02FEAB4058423 /* Pods_PinchableLabel_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CE9B440E60904228D98F4B /* Pods_PinchableLabel_Example.framework */; };
 		ED43C3921C6AE032007E7C6F /* KTouchPointerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = ED43C3911C6AE032007E7C6F /* KTouchPointerWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01DEC42B1ECD4FB8739D493C /* Pods-PinchableLabel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchableLabel_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinchableLabel_Tests/Pods-PinchableLabel_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		021E10C07B03D0EB5D411824 /* Pods_PinchableLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinchableLabel_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10CE9B440E60904228D98F4B /* Pods_PinchableLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinchableLabel_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B58726C85C29081E3F838C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		4679581069A05735B9D0E06F /* Pods-PinchableLabel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchableLabel_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinchableLabel_Example/Pods-PinchableLabel_Example.release.xcconfig"; sourceTree = "<group>"; };
-		53E94F08455B8EB385A06458 /* Pods-PinchableLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchableLabel_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinchableLabel_Tests/Pods-PinchableLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		46FF9237B4B7AF673AA7D89B /* Pods-PinchableLabel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchableLabel_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PinchableLabel_Example/Pods-PinchableLabel_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* PinchableLabel_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinchableLabel_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,8 +27,7 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		B9A3187DE472988932986AF4 /* Pods_PinchableLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinchableLabel_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCC309128F023ADD224217F7 /* Pods-PinchableLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchableLabel_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinchableLabel_Example/Pods-PinchableLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		91E506AB9E774CA1E971E6AC /* Pods-PinchableLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinchableLabel_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PinchableLabel_Example/Pods-PinchableLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D19B6648964335D92BF34167 /* PinchableLabel.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PinchableLabel.podspec; path = ../PinchableLabel.podspec; sourceTree = "<group>"; };
 		ED014D82AF6A22A5432D2BBD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		ED43C38F1C6AE031007E7C6F /* PinchableLabel_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PinchableLabel_Example-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -43,30 +40,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62BAE0F837067CDCC8187350 /* Pods_PinchableLabel_Example.framework in Frameworks */,
+				69EF859E01E02FEAB4058423 /* Pods_PinchableLabel_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		41D612DCEE3DBD48433BC24A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B9A3187DE472988932986AF4 /* Pods_PinchableLabel_Example.framework */,
-				021E10C07B03D0EB5D411824 /* Pods_PinchableLabel_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for PinchableLabel */,
 				607FACD11AFB9204008FA782 /* Products */,
-				9CFEAD948508CE1CAA4097E6 /* Pods */,
-				41D612DCEE3DBD48433BC24A /* Frameworks */,
+				C7CC5FAB0AB7B448BCEDB0D7 /* Pods */,
+				FEA17662776A4BAC44173C02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,15 +101,21 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		9CFEAD948508CE1CAA4097E6 /* Pods */ = {
+		C7CC5FAB0AB7B448BCEDB0D7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BCC309128F023ADD224217F7 /* Pods-PinchableLabel_Example.debug.xcconfig */,
-				4679581069A05735B9D0E06F /* Pods-PinchableLabel_Example.release.xcconfig */,
-				53E94F08455B8EB385A06458 /* Pods-PinchableLabel_Tests.debug.xcconfig */,
-				01DEC42B1ECD4FB8739D493C /* Pods-PinchableLabel_Tests.release.xcconfig */,
+				91E506AB9E774CA1E971E6AC /* Pods-PinchableLabel_Example.debug.xcconfig */,
+				46FF9237B4B7AF673AA7D89B /* Pods-PinchableLabel_Example.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FEA17662776A4BAC44173C02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10CE9B440E60904228D98F4B /* Pods_PinchableLabel_Example.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,12 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PinchableLabel_Example" */;
 			buildPhases = (
-				5BCC4821F53F03BD1045FB7C /* Check Pods Manifest.lock */,
+				5FB2A70FB92363576E4E931B /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				39C6023E3DCB0404A1552831 /* Embed Pods Frameworks */,
-				91BE7F1522134A48E0EBA9AF /* Copy Pods Resources */,
+				92627F69E859BBF7E703DF93 /* [CP] Embed Pods Frameworks */,
+				FA476F8A8E22994DA7A7738A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,11 +148,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -194,14 +189,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		39C6023E3DCB0404A1552831 /* Embed Pods Frameworks */ = {
+		5FB2A70FB92363576E4E931B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		92627F69E859BBF7E703DF93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,29 +219,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PinchableLabel_Example/Pods-PinchableLabel_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5BCC4821F53F03BD1045FB7C /* Check Pods Manifest.lock */ = {
+		FA476F8A8E22994DA7A7738A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		91BE7F1522134A48E0EBA9AF /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,8 +282,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -332,8 +329,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -352,14 +351,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCC309128F023ADD224217F7 /* Pods-PinchableLabel_Example.debug.xcconfig */;
+			baseConfigurationReference = 91E506AB9E774CA1E971E6AC /* Pods-PinchableLabel_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PinchableLabel/Info.plist;
@@ -369,13 +370,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PinchableLabel/PinchableLabel_Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4679581069A05735B9D0E06F /* Pods-PinchableLabel_Example.release.xcconfig */;
+			baseConfigurationReference = 46FF9237B4B7AF673AA7D89B /* Pods-PinchableLabel_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PinchableLabel/Info.plist;
@@ -384,6 +387,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PinchableLabel/PinchableLabel_Example-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

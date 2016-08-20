@@ -1,6 +1,0 @@
-framework module Pods_PinchableLabel_Tests {
-  umbrella header "Pods-PinchableLabel_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

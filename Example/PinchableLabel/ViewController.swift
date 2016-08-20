@@ -10,17 +10,17 @@ import UIKit
 import PinchableLabel
 
 class ViewController: UIViewController, PinchableLabelDelegate {
-  override func viewDidAppear(animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     let label = PinchableLabel()
     label.numberOfLines = 0
     let text = NSMutableAttributedString(string: "hoge\n", attributes: [
-      NSFontAttributeName: UIFont.systemFontOfSize(20),
-      NSForegroundColorAttributeName: UIColor.blueColor(),
+      NSFontAttributeName: UIFont.systemFont(ofSize: 20),
+      NSForegroundColorAttributeName: UIColor.blue,
     ])
-    text.appendAttributedString(NSAttributedString(string: "piyopiyo", attributes: [
-      NSFontAttributeName: UIFont.systemFontOfSize(10),
-      NSForegroundColorAttributeName: UIColor.redColor(),
+    text.append(NSAttributedString(string: "piyopiyo", attributes: [
+      NSFontAttributeName: UIFont.systemFont(ofSize: 10),
+      NSForegroundColorAttributeName: UIColor.red,
     ]))
     label.attributedText = text
     label.sizeToFit()
@@ -30,15 +30,15 @@ class ViewController: UIViewController, PinchableLabelDelegate {
     label.delegate = self
   }
   
-  func pinchableLabelTouchesBegan(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?) {
+  func pinchableLabelTouchesBegan(_ pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?) {
     print("began delegate")
   }
   
-  func pinchableLabelTouchesMoved(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?) {
+  func pinchableLabelTouchesMoved(_ pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?) {
     print("moved delegate")
   }
   
-  func pinchableLabelTouchesEnded(pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?) {
+  func pinchableLabelTouchesEnded(_ pinchableLabel: PinchableLabel, touches: Set<UITouch>, withEvent event: UIEvent?) {
     print("ended delegate")
   }
 }
